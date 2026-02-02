@@ -5,7 +5,6 @@ FROM python:3.12-slim
 ENV SUPABASE_URL="YOUR_URL" \
     SUPABASE_KEY="YOUR_KEY"
 
-
 # Set working directory inside the container #
 WORKDIR /keystone
 
