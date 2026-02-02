@@ -1,0 +1,6 @@
+version: "3.9"
+
+services:
+  keystone-app:
+    build: .                  # Use Dockerfile in current directory
+    container_name: keystone_app
