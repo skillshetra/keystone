@@ -37,7 +37,7 @@ class Key_Stone_Analysis:
         """
         print("\033[34m[INFO] Fetching data from the database...\033[0m")
         self.dataframe = get_products()
-        print(f"\033[32m[INFO] Dataframe loaded with {len(self.dataframe)} rows.\033[0m")
+        print(f"\033[32m[SUCC] Dataframe loaded with {len(self.dataframe)} rows.\033[0m")
         return self.dataframe
 
     def compute_metrics(self):
@@ -51,7 +51,7 @@ class Key_Stone_Analysis:
 
         print("\033[34m[INFO] Computing metrics...\033[0m")
         self.metrics = compute_all_metrics(self.dataframe).get_metrics()
-        print("\033[32m[INFO] Metrics computation completed.\033[0m")
+        print("\033[32m[SUCC] Metrics computation completed.\033[0m")
         return self.metrics
 
     def persist_results(self):
@@ -63,7 +63,7 @@ class Key_Stone_Analysis:
 
         print("\033[34m[INFO] Persisting results...\033[0m")
         save_results(self.metrics)
-        print("\033[32m[INFO] Results persisted successfully.\033[0m")
+        print("\033[32m[SUCC] Results persisted SUCCfully.\033[0m")
 
     def run(self):
         """
@@ -73,5 +73,5 @@ class Key_Stone_Analysis:
         self.compute_metrics()
         self.persist_results()
         print("\n" + "="*60)
-        print("*" * 5 + " ✅  Keystone Analysis Completed Successfully! ✅ " + "*" * 5)
+        print("*" * 5 + " ✅  Keystone Analysis Completed SUCCfully! ✅ " + "*" * 5)
         print("="*60 + "\n")
