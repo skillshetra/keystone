@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 """
 main.py
 
@@ -18,8 +19,4 @@ if __name__ == "__main__":
     #   - Computing metrics
     #   - Performing statistical analysis
     #   - Persisting results
-    Key_Stone_Analysis()
-    # Print a success message #
-    print("\n" + "="*60)
-    print("*" * 5 + " ✅  Keystone Analysis Completed Successfully! ✅ " + "*" * 5)
-    print("="*60 + "\n")
+    Key_Stone_Analysis().run()

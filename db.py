@@ -5,6 +5,7 @@ db.py
 Handles connection to Supabase and fetching product data.
 """
 
+
 # Import necessary packages #
 from os import environ as env
 from pandas import DataFrame

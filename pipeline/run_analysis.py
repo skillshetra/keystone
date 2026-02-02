@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 """
 run_analysis.py
 
@@ -10,16 +11,14 @@ the full data analysis pipeline:
 - Persist results
 """
 
-# Import necessary packages
+# Import necessary packages #
 from db import get_products
 from pipeline.compute_metrics import compute_all_metrics
 from pipeline.persist_results import save_results
 
 
 class Key_Stone_Analysis:
-    """
-    Main class to run the Keystone data analysis pipeline.
-    """
+    # Main class to run the Keystone data analysis pipeline #
 
     def __init__(self):
         """
@@ -51,7 +50,7 @@ class Key_Stone_Analysis:
             raise ValueError("Dataframe not loaded. Call get_dataframe() first.")
 
         print("\033[34m[INFO] Computing metrics...\033[0m")
-        self.metrics = compute_all_metrics(self.dataframe)
+        self.metrics = compute_all_metrics(self.dataframe).get_metrics()
         print("\033[32m[INFO] Metrics computation completed.\033[0m")
         return self.metrics
 
@@ -76,24 +75,3 @@ class Key_Stone_Analysis:
         print("\n" + "="*60)
         print("*" * 5 + " ✅  Keystone Analysis Completed Successfully! ✅ " + "*" * 5)
         print("="*60 + "\n")
-
-
-
-
-
-# Creating Dataframe #
-# dataframe = get_products()
-# print(dataframe.info())
-# print(dataframe.describe())
-# print(dataframe.isnull().sum())
-
-# print(dataframe['product_id'])
-# print(dataframe['category'])
-# print(dataframe['discounted_price'])
-# print(dataframe['actual_price'])
-# print(dataframe['discount_percentage'])
-# print(dataframe['rating'])
-# print(dataframe['rating_count'])
-# print(dataframe['user_id'])
-# print(dataframe['user_name'])
-# print(dataframe['review_id'])
